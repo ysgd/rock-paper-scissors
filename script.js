@@ -43,11 +43,14 @@ const playRound = (playerSelection, computerSelection) =>{
         return "You win! Scissors cuts paper"
     }
 }
-const playerSelection = 'rock'
+
+
+
 const game = () =>{
     for(i=0; i<5; i++){
-        const computerSelection = computerPlay();
-        playRound(playerSelection, computerSelection);
+        const playerSelection = prompt('choose what you want', 'Rock, Paper, Scissors').toLowerCase()
+        const computerSelection = computerPlay()
+        playRound(playerSelection, computerSelection)
     }
     if(playerScore>compScore){
         return 'player won'
@@ -59,4 +62,4 @@ const game = () =>{
     return 'draw'
     }
 
-game();
+console.log(game());
